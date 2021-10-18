@@ -103,9 +103,9 @@ async function getCountryById(req, res, next) {
       const { data } = await axios.get(
         `https://restcountries.com/v2/all/${id}`
       );
-
+        
       let country = {
-        id: data.id,
+        id: data.alpha3Code,
         name: data.name,
         flagImg: data.flagImg,
         continent: data.continent,
