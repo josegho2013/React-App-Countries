@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .container {
+    display: grid;
+    grid: auto-flow dense / 1fr 1fr 1fr;
+    justify-content: space-around;
+    text-align: center;
+  }

@@ -1,17 +1,26 @@
 .card {
     display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 261px;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: 5px;
+    border: 3px solid transparent;
+    background-color: rgb(233, 225, 225);
+    color: rgb(20, 19, 19);
+    border-radius: 10px;
+    font-family: "Urbanist";
+    font-variant: small-caps;
+    cursor: pointer;
+  
+
+
+};
+
+.card {
+    display: grid;
+    grid: auto-flow dense / 1fr 1fr 1fr;
     justify-content: space-around;
     text-align: center;
-    width: 200px;
-    height: auto;
-    margin-top: 6%;
-  
-    font-family: monospace;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 34px;
-    border: 1px solid #797979;
-    flex: 0 0 30%;
-    background-color: hsla(0, 0%, 94.5%, 0.8);
-    box-shadow: 6px 6px 10px rgb(71 71 71 / 43%);
-}
+  }

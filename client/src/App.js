@@ -5,7 +5,7 @@ import Card from "./components/Card";
 import Navbar from "./components/Navbar";
 import Filters from "./components/Filters";
 import Search from "./components/Search";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer"; 
 import Landing from "./components/Landing";
 import CardDetail from "./components/CardDetail";
 import Create from "./components/Create";
@@ -24,6 +24,8 @@ function App() {
         render={({ match }) => <CardDetail id={match.params.id} />}
       />
       <Route path="/Home" component={Footer} />
+
+    
     </div>
   );
 }

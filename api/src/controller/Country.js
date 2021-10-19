@@ -17,7 +17,7 @@ async function getAllCountry(req, res, next) {
         population: el.population,
       };
     });
-   
+  
 
     let dataBase = await Country.findAll({
       attributes: ["id", "name", "flagImg", "continent", "subregion", "population"],
