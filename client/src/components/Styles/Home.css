@@ -15,3 +15,7 @@
     justify-content: space-around;
     text-align: center;
   }
+  .filter{
+    flex-direction: row;
+    justify-content: space-evenly
+  }

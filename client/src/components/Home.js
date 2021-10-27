@@ -18,8 +18,9 @@ const Home = () => {
  
   }, [dispatch]);
   return (
+    <div>
+      <Filters />
     <div className=" container">
-       <Filters />
       {requestCountries ? (
         requestCountries.map((co) => {
           console.log(co,"aquiii")
@@ -35,6 +36,7 @@ const Home = () => {
       ) : (
         <div className="loading">Loading...</div>
       )}
+    </div>
     </div>
   );
 };
