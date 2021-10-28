@@ -21,7 +21,16 @@ const Navbar = () => {
     };
     return (
         <div>
-            
+             <form onSubmit={(e) => handleSearch(e)}>
+        <input
+          type="search"
+          placeholder="Search countries..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button type="submit">Search</button>
+      </form>
+
         </div>
     )
 }
