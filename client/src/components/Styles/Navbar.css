@@ -1,0 +1,9 @@
+.navbar {
+    display: flex;
+    margin: auto;
+    padding: 30px 9%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cadetblue;
+    font-family: "Urbanist";
+  }

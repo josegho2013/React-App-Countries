@@ -20,7 +20,7 @@ const Navbar = () => {
       dispatch(getAllCountry()());
     };
     return (
-        <div>
+        <div className="navbar">
              <form onSubmit={(e) => handleSearch(e)}>
         <input
           type="search"
