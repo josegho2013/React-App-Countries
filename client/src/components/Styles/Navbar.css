@@ -7,3 +7,9 @@
     background-color: cadetblue;
     font-family: "Urbanist";
   }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    width: 18%;
+  }

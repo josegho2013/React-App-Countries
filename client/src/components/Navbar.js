@@ -2,6 +2,8 @@ import { React, useState } from "react";
 import { useDispatch } from "react-redux";
 import { searchByName } from "../redux/actions/actions";
 import{getAllCountry} from "../redux/actions/actions"
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
 
@@ -17,7 +19,7 @@ const Navbar = () => {
     };
   
     const reset = () => {
-      dispatch(getAllCountry()());
+      dispatch(getAllCountry());
     };
     return (
         <div className="navbar">
@@ -30,6 +32,17 @@ const Navbar = () => {
         />
         <button type="submit">Search</button>
       </form>
+
+      <div className="links">
+        <Link to="/home">
+          <button onClick={() => reset()} className="button">
+            Home
+          </button>
+        </Link>
+        <Link to="/Create">
+          <button>Create Activity</button>
+        </Link>
+      </div>
 
         </div>
     )
