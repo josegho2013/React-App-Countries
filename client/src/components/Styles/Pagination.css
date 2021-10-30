@@ -1,0 +1,10 @@
+.page_container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+  }
+  
