@@ -21,7 +21,7 @@ const Home = () => {
 
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [countriesPerPage] = useState(8);
+  const [countriesPerPage] = useState(9);
   
   const indexOfLastDogs = currentPage * countriesPerPage;
   const indexOfFirsDogs = indexOfLastDogs - countriesPerPage;
@@ -35,9 +35,9 @@ const Home = () => {
     <div>
       <Filters />
     <div className=" container">
-      {requestCountries ? (
-        requestCountries.map((co) => {
-          console.log(co,"aquiii")
+      {countriesPage ? (
+        countriesPage .map((co) => {
+          
           return (
             <Card
               key={co.id}
