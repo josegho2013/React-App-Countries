@@ -1,0 +1,9 @@
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url("https://i.pinimg.com/564x/ea/36/21/ea3621e4c67082f8597015549260be48.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
