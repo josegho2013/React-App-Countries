@@ -22,6 +22,21 @@ const Navbar = () => {
   };
   return (
     <div className="navbar">
+
+      <div className="links">
+        <div>
+          <Link to="/home">
+            <button onClick={() => reset()} className="button">
+              Home
+            </button>
+          </Link>
+        </div>
+        <div>
+          <Link to="/Create">
+            <button className="button">Create Activity</button>
+          </Link>
+        </div>
+      </div>
       <form onSubmit={(e) => handleSearch(e)}>
         <input
           type="search"
@@ -31,17 +46,6 @@ const Navbar = () => {
         />
         <button type="submit">Search</button>
       </form>
-
-      <div className="links">
-        <Link to="/home">
-          <button onClick={() => reset()} className="button">
-            Home
-          </button>
-        </Link>
-        <Link to="/Create">
-          <button className= "button">Create Activity</button>
-        </Link>
-      </div>
     </div>
   );
 };

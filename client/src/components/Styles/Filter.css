@@ -1,12 +1,13 @@
 .filte{
 
   display: flex;
-  text-align: center;
-  justify-content: space-evenly;
-  height: 20px;
-    
+    text-align: center;
+    justify-content: space-evenly;
+    height: 20px;
+    margin-top: 10px;
   }
 
   .parrafo{
     margin-top: 0px;
+    margin-right: -100px;
   }
