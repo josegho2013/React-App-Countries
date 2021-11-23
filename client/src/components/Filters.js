@@ -46,26 +46,26 @@ const Filters = () => {
 
   return (
     <div className="filte">
-      <p>Continent</p>
+      <p className ="parrafo">Continent</p>
       <select onChange={(e) => handleFilterByContinent(e)}>
         <option default>All</option>
       </select>
 
-      <p>Population </p>
+      <p className ="parrafo">Population </p>
       <select onChange={(e) => handleFilterByPopulation(e)}>
         <option default>All</option>
         <option>Ascendent</option>
         <option>Descendent</option>
       </select>
 
-      <p>Activity Tourist</p>
+      <p className ="parrafo">Activity Tourist</p>
       <select onChange={(e) => handleFilterByActivityTourist(e)}>
         <option default>All</option>
         <option>Ascendent</option>
         <option>Descendent</option>
       </select>
 
-      <p>Order</p>
+      <p className ="parrafo">Order</p>
       <select onChange={(e) => handleOrder(e)}>
         <option default>All</option>
         <option>Ascendent</option>

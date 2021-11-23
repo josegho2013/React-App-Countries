@@ -1,7 +1,12 @@
 .filte{
 
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  height: 20px;
     
+  }
+
+  .parrafo{
+    margin-top: 0px;
   }

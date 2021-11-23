@@ -39,7 +39,7 @@ const Navbar = () => {
           </button>
         </Link>
         <Link to="/Create">
-          <button>Create Activity</button>
+          <button className= "button">Create Activity</button>
         </Link>
       </div>
     </div>
