@@ -1,29 +1,28 @@
 import { React, useState } from "react";
 import { useDispatch } from "react-redux";
 import { searchByName } from "../redux/actions/actions";
-import{getAllCountry} from "../redux/actions/actions"
+import { getAllCountry } from "../redux/actions/actions";
 import { Link } from "react-router-dom";
-
+import "./Styles/Navbar.css";
 
 const Navbar = () => {
+  const [search, setSearch] = useState("");
+  const dispatch = useDispatch();
 
-    const [search, setSearch] = useState("");
-    const dispatch = useDispatch();
-  
-    const handleSearch = (e) => {
-      e.preventDefault();
-      dispatch(searchByName(search));
-      if (search) {
-        setSearch("");
-      }
-    };
-  
-    const reset = () => {
-      dispatch(getAllCountry());
-    };
-    return (
-        <div className="navbar">
-             <form onSubmit={(e) => handleSearch(e)}>
+  const handleSearch = (e) => {
+    e.preventDefault();
+    dispatch(searchByName(search));
+    if (search) {
+      setSearch("");
+    }
+  };
+
+  const reset = () => {
+    dispatch(getAllCountry());
+  };
+  return (
+    <div className="navbar">
+      <form onSubmit={(e) => handleSearch(e)}>
         <input
           type="search"
           placeholder="Search Countries..."
@@ -43,9 +42,8 @@ const Navbar = () => {
           <button>Create Activity</button>
         </Link>
       </div>
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default Navbar
+export default Navbar;
