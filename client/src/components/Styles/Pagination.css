@@ -16,10 +16,24 @@
     border-radius: 0.6rem;
     border: none;
     list-style: none;
-    background-color: white;
+    background-color: rgb(54, 187, 36);
     color: black;
     font-family: "Urbanist";
     font-weight: bold;
     font-size: large;
     box-shadow: 1px 1px 20px 10px rgba(0, 0, 255, 0.2);
   }
+  .page_container ul :hover {
+    text-align: center;
+    background-color: #114a61;
+    color: rgb(219, 24, 24);
+  }
+  
+  .page_container ul {
+    padding: 0;
+  }
+  .page_container button.active {
+    background-color: #114a61;
+    color: rgb(139, 53, 111);
+  }
+  

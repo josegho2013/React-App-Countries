@@ -1,11 +1,13 @@
 import "./Styles/Pagination.css";
 
-const Pagination = ({ countriesPerPage, totalcountries, paginate, currentPage }) => {
+const Pagination = ({ countriesPerPage, totalCountries, paginate, currentPage }) => {
   const pageNumbers = []; // 1 2 3 4 5..
-
-  for (let i = 1; i <= Math.ceil(totalcountries / countriesPerPage); i++) {
+  
+  for (let i = 1; i <= Math.ceil(totalCountries / countriesPerPage); i++) {
     pageNumbers.push(i);
   }
+  
+  
 
   return (
     <div className="page_container">

@@ -57,7 +57,9 @@ const Home = () => {
         paginate={paginate}
         currentPage={currentPage}
         key={"#"}
+       
       />
+       <h1> soy paginacion</h1>
     </div>
   );
 };
