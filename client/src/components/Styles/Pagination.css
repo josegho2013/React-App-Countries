@@ -16,24 +16,24 @@
     border-radius: 0.6rem;
     border: none;
     list-style: none;
-    background-color: rgb(54, 187, 36);
+    background-color: rgb(58, 217, 223);
     color: black;
     font-family: "Urbanist";
     font-weight: bold;
     font-size: large;
-    box-shadow: 1px 1px 20px 10px rgba(0, 0, 255, 0.2);
+    box-shadow: 1px 1px 20px 10px rgba(107, 184, 236, 0.87);
   }
   .page_container ul :hover {
     text-align: center;
-    background-color: #114a61;
-    color: rgb(219, 24, 24);
+    background-color: #f6db41;
+    color: white;
   }
   
   .page_container ul {
     padding: 0;
   }
   .page_container button.active {
-    background-color: #114a61;
-    color: rgb(139, 53, 111);
+    background-color: #3b77e7;
+    color: white;
   }
   

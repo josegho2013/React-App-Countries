@@ -17,6 +17,7 @@ const initialState = {
   temperament: [],
   searchById: [],
   requestCountries: [],
+  continents: [],
   countriesDelete: false,
 };
 
@@ -27,7 +28,11 @@ function RootReducer(state = initialState, action) {
         ...state,
         countriesAll: action.payload,
         requestCountries: action.payload,
+        continents: action.payload.map((c) => {
+          return c.continent;
+        }),
       };
+
     case ADD_ACTIVITY:
       return {
         ...state,
@@ -74,7 +79,6 @@ function RootReducer(state = initialState, action) {
       };
 
     case FILTER_BY_CONTINENT:
-     
       return {
         ...state,
         requestCountries: action.payload,

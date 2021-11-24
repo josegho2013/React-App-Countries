@@ -43,29 +43,37 @@ const Filters = () => {
       dispatch(getAllCountry());
     }
   };
+  const continents = useSelector(({ continents }) => continents);
+  const filterPlat = continents?.flat().filter((v, i, a) => {
+    return a.findIndex((t) => t.id === v.id) === i;
+  });
+
+  const filterC = 
+  console.log("continents: ",continents)
+  console.log("filterPlat: ",filterPlat)
 
   return (
     <div className="filte">
-      <p className ="parrafo">Continent</p>
+      <p className="parrafo">Continent</p>
       <select onChange={(e) => handleFilterByContinent(e)}>
         <option default>All</option>
       </select>
 
-      <p className ="parrafo">Population </p>
+      <p className="parrafo">Population </p>
       <select onChange={(e) => handleFilterByPopulation(e)}>
         <option default>All</option>
         <option>Ascendent</option>
         <option>Descendent</option>
       </select>
 
-      <p className ="parrafo">Activity Tourist</p>
+      <p className="parrafo">Activity Tourist</p>
       <select onChange={(e) => handleFilterByActivityTourist(e)}>
         <option default>All</option>
         <option>Ascendent</option>
         <option>Descendent</option>
       </select>
 
-      <p className ="parrafo">Order</p>
+      <p className="parrafo">Order</p>
       <select onChange={(e) => handleOrder(e)}>
         <option default>All</option>
         <option>Ascendent</option>
