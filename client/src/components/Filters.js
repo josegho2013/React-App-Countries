@@ -28,12 +28,8 @@ const Filters = () => {
     dispatch(filterByContinent(e.target.value));
   };
 
-  const handleFilterByPopulation = (e) => {
-    dispatch(filterByPopulation(e.target.value));
-  };
-  const handleFilterByActivityTourist = (e) => {
-    dispatch(filterByActivityTourist(e.target.value));
-  };
+ 
+  
   const handleOrder = (e) => {
     if (e.target.value === "Ascendent") {
       dispatch(filterOrderAsc(e.target.value));
@@ -44,35 +40,29 @@ const Filters = () => {
     }
   };
   const continents = useSelector(({ continents }) => continents);
-  const filterPlat = continents?.flat().filter((v, i, a) => {
-    return a.findIndex((t) => t.id === v.id) === i;
-  });
+  // const filterPlat = continents?.flat().filter((v, i, a) => {
+  //   return a.findIndex((t) => t.id === v.id) === i;
+  // });
 
-  const filterC = 
-  console.log("continents: ",continents)
-  console.log("filterPlat: ",filterPlat)
+  const filterC = continents.filter((item, index) => {
+    return continents.indexOf(item) === index;
+  });
+  const populations = useSelector(({ populations }) => populations);
 
   return (
     <div className="filte">
       <p className="parrafo">Continent</p>
       <select onChange={(e) => handleFilterByContinent(e)}>
         <option default>All</option>
+
+        {filterC.map((p) => (
+          <option key={p} value={p}>
+            {p}
+          </option>
+        ))}
       </select>
 
-      <p className="parrafo">Population </p>
-      <select onChange={(e) => handleFilterByPopulation(e)}>
-        <option default>All</option>
-        <option>Ascendent</option>
-        <option>Descendent</option>
-      </select>
-
-      <p className="parrafo">Activity Tourist</p>
-      <select onChange={(e) => handleFilterByActivityTourist(e)}>
-        <option default>All</option>
-        <option>Ascendent</option>
-        <option>Descendent</option>
-      </select>
-
+     
       <p className="parrafo">Order</p>
       <select onChange={(e) => handleOrder(e)}>
         <option default>All</option>

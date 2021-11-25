@@ -31,11 +31,8 @@ const Navbar = () => {
             </button>
           </Link>
         </div>
-        <div>
-          <Link to="/Create">
-            <button className="button">Create Activity</button>
-          </Link>
-        </div>
+        
+        
       </div>
       <form onSubmit={(e) => handleSearch(e)}>
         <input

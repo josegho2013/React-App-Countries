@@ -34,13 +34,6 @@ export const searchByName = (payload) => {
   };
 };
 
-export const createActivity = (payload) => {
-  return async (dispatch) => {
-    const { data } = await axios.post(`/countries/create`, payload);
-    dispatch({ type: ADD_ACTIVITY, payload: data });
-  };
-};
-
 export const countryDelete= (id) => {
   return async (dispatch) => {
     await axios.delete(`countries/countriesDelete/${id}`);
@@ -66,16 +59,6 @@ export const filterOrderDes = (payload) => {
   };
 };
 
-export const filterByPopulation = (payload) => {
-  return (dispatch) => {
-    dispatch({ type: FILTER_ORDER_POPULATION, payload: payload });
-  };
-};
 
-export const filterByActivityTourist = (payload) => {
-  return (dispatch) => {
-    dispatch({ type: FILTER_BY_ACTIVITY_TOURIST, payload: payload });
-  };
-};
 
 

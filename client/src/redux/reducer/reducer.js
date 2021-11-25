@@ -18,6 +18,7 @@ const initialState = {
   searchById: [],
   requestCountries: [],
   continents: [],
+  populations:[],
   countriesDelete: false,
 };
 
@@ -30,6 +31,9 @@ function RootReducer(state = initialState, action) {
         requestCountries: action.payload,
         continents: action.payload.map((c) => {
           return c.continent;
+        }),
+        populations:action.payload.map((p) => {
+          return p.population;
         }),
       };
 
@@ -75,7 +79,7 @@ function RootReducer(state = initialState, action) {
             });
       return {
         ...state,
-        requestDogs: [...ascDescFilter],
+        requestCountries: [...ascDescFilter],
       };
 
     case FILTER_BY_CONTINENT:
@@ -84,55 +88,8 @@ function RootReducer(state = initialState, action) {
         requestCountries: action.payload,
       };
 
-    case FILTER_ORDER_POPULATION:
-      const orderByPopulation =
-        action.payload === "Young"
-          ? state.countriesAll.sort((a, b) => {
-              if (
-                Number(a.population > a.population) >
-                Number(b.population < b.population)
-              ) {
-                return 1;
-              } else {
-                return -1;
-              }
-            })
-          : state.countriesAll.sort((a, b) => {
-              if (
-                Number(a.population > a.population) <
-                Number(b.population < b.population)
-              ) {
-                return 1;
-              } else {
-                return -1;
-              }
-            });
-      return {
-        ...state,
-        requestCountries: [...orderByPopulation],
-      };
-
-    case FILTER_BY_ACTIVITY_TOURIST:
-      const orderByTourist =
-        action.payload === "Ascendent" || action.payload === "All"
-          ? state.countriesAll.sort((a, b) => {
-              if (a.name > b.name) {
-                return 1;
-              } else {
-                return -1;
-              }
-            })
-          : state.countriesAll.sort((a, b) => {
-              if (a.name < b.name) {
-                return 1;
-              } else {
-                return -1;
-              }
-            });
-      return {
-        ...state,
-        requestCountries: [...orderByTourist],
-      };
+    
+    
 
     default:
       return state;
